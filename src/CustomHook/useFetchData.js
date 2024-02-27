@@ -20,13 +20,13 @@ const useFetchData = (url, itemsPerPage) => {
           url: item.images.original.url,
           title: item.title,
         }));
-        console.log(jsonResponse);
+
         setData(transformedData);
         setTotalPages(
           Math.ceil(jsonResponse?.pagination?.total_count / itemsPerPage)
-        ); // Update total pages
+        );
 
-        setError(null); // Clear any previous errors
+        setError(null);
       } catch (err) {
         setError(err.message);
       } finally {
