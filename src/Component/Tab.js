@@ -12,7 +12,7 @@ const Tab = () => {
     localStorage.setItem("activeTab", activeTab);
   }, [activeTab]);
   return (
-    <div>
+    <div style={{ gap: "20px" }}>
       <button onClick={() => setActiveTab("Gifs")}>GIFs</button>
       <button onClick={() => setActiveTab("Stickers")}>Stickers</button>
       <button onClick={() => setActiveTab("Search")}>Search</button>
